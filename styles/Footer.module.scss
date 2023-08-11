@@ -1,0 +1,50 @@
+@import 'colors';
+
+.footer {
+	display: flex;
+	flex-direction: row;
+
+	.left {
+		width: 40%;
+		background-color: $med-gray;
+		padding: 50px;
+		display: inline-block;
+	}
+	.right {
+		width: 60%;
+		background-color: $title;
+		display: flex;
+		flex-direction: column;
+		padding: 50px;
+		gap: 50px;
+		display: inline-block;
+		.directories {
+			display: flex;
+			gap: 20px;
+			text-decoration: none;
+		}
+		.info {
+			display: flex;
+			gap: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 996px) {
+	.footer {
+		display: flex;
+		flex-direction: column-reverse;
+		.left {
+			width: 100%;
+		}
+		.right {
+			width: 100%;
+			.directories,
+			.info {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+		}
+	}
+}

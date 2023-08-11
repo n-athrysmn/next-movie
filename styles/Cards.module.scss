@@ -1,0 +1,51 @@
+@import 'colors';
+
+.card {
+	background: rgb(65, 65, 65);
+	background: linear-gradient(
+		180deg,
+		rgba(65, 65, 65, 1) 0%,
+		rgba(0, 0, 0, 1) 90%
+	);
+	height: 560px;
+	padding: 30px;
+	position: relative;
+
+	.badge {
+		background-color: $gold;
+		display: inline-block;
+		border-radius: 16px;
+		padding: 2px 8px;
+		color: black;
+		font-size: 14px;
+		align-items: center;
+	}
+
+	.bottom {
+		position: absolute;
+		bottom: 0;
+
+		.infos {
+			display: flex;
+			flex-direction: row;
+			gap: 30px;
+
+			.duration,
+			.views {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+		}
+
+		.title {
+			margin-top: 10px;
+		}
+	}
+}
+
+@media screen and (max-width: 996px) {
+	.card {
+		width: 100%;
+	}
+}
